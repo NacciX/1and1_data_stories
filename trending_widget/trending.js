@@ -46,19 +46,20 @@ Sisense.connect('http://nacci.sisense.com').then(function(app) { // replace with
 			    th.align='right';
 			    var text_length = data[i][0].text.length;
 			    var clean_text = data[i][0].text.slice(8, text_length-1).replace(/-/g, " "); 
-			    th.innerHTML = '<a valign="middle" href="https://www.1and1life.com'+data[i][0].text+'">'+clean_text+'</a>';   // Use innerHTML to set the text
+			    th.innerHTML = '<a align="center" href="https://www.1and1life.com'+data[i][0].text+'">'+clean_text+'</a>';   // Use innerHTML to set the text
 			    tr.appendChild(th);                
 
 			    //column 2
 			    var th = document.createElement('th');
 
 			    th.setAttribute("id", "image_"+i);
+			    th.align = 'center';
 			    for (var j=0; j < data[i][1].data; j++){
 				var img = document.createElement('img');
 				//set the source of the image
 				img.src = 'fire.gif';
-				img.height = '14';
-				img.valign = 'middle';
+				img.height = '30';
+				img.align = 'center';
 				th.appendChild(img);
 			    };
 			    tr.appendChild(th);
@@ -68,7 +69,7 @@ Sisense.connect('http://nacci.sisense.com').then(function(app) { // replace with
 			}
 			//listDiv.appendChild(tr);    // Note here
 
-		    }, 1000);
+		    }, 2000);
 		
 	    });
     });
