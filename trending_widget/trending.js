@@ -69,7 +69,7 @@ Sisense.connect('http://nacci.sisense.com').then(function(app) { // replace with
 			}
 			//listDiv.appendChild(tr);    // Note here
 
-		    }, 2000);
+		    }, 1000);
 		
 	    });
     });
